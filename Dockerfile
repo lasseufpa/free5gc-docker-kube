@@ -2,6 +2,7 @@ FROM golang:1.11-stretch
 
 MAINTAINER Virgínia Tavares <briosovirginia@gmail.com>
 
+#Prerequisites
 RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y --no-install-recommends \
@@ -33,9 +34,11 @@ RUN go get -u -v "github.com/gorilla/mux"
 RUN go get -u -v "golang.org/x/net/http2"
 RUN go get -u -v "golang.org/x/sys/unix"
 
+#TUN device
 COPY setup.sh /root
 RUN chmod 777 /root/setup.sh
 
+#AMF, SMF, UPF, HSS, and PCRF
 RUN cd /usr/src && git clone https://bitbucket.org/nctu_5g/free5gc-stage-1.git
 RUN cd /usr/src/free5gc-stage-1 && \
     autoreconf -iv && \
