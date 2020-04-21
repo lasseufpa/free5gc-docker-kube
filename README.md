@@ -1,38 +1,42 @@
-# free5gc-docker-compose
-#docker-compose of free5gc
+# free5gc-docker-kube
+This repository contains the necessary files for the deployment of 5G modules (AMF, HSS, SMF, PCRF, and UPF) by Free5Gc through Docker and Kubernetes
 
-## What's this?
+## What's Free5Gc?
 
-The free5GC is an open-source project for 5th generation (5G) mobile core network. Currently, the major contributors are with National Chiao Tung University (NCTU). Although the ultimate goal of this project is to implement 3GPP Release 15 (R15) and Release 16 (R16) 5G core network (5GC), in current version we only implement three most important components in 5GC, namely Access and Mobility Management Function (AMF), Session Management Function (SMF) and User Plane Function (UPF). Thus, current version is mainly for the enhance Mobile Broadband (eMBB). Other features such as Ultra-Reliable Low Latency Connection (URLLC) and Massive Internet of Things (MIoT) are not supported yet.
+The free5GC is an open-source project for the 5th generation (5G) mobile core network. The source code of free5GC can be downloaded from [here](https://bitbucket.org/nctu_5g/free5gc).
 
-The source code of free5GC can be downloaded from [here](https://bitbucket.org/nctu_5g/free5gc).
+## Environment 
 
-### free5GC-docker
-free5GC-docker is an free5gc all-in-one implement in docker-compose. It's for easier test and develop the project.
+Basically all modules have the same basic environment configuration (which is done in the free5gc-base Dockerfile). The difference is that in all free5gc.conf and / or [module].conf must be configured differently. UPF has a difference from all other modules, it must have two network interfaces: a bridge (free5gc network) and a TUN device.
 
-### Run Up
-Because we need to create tunnel interface, we need to use privileged container with root permission.
-```bash
-$ git clone https://gitlab.lasse.ufpa.br/2020-ai-testbed/ai-testbed/free5gc-docker-kube.git
-$ cd free5gc-docker-kube
-```
-
-After you run up your compose, attach into docker and start your test or develop
-```bash
-$ docker exec -it free5gc bash
-# cd free5gc
-# ./test/testngc -f install/etc/free5gc/test/free5gc.testngc.conf
-```
-
-## Troubleshooting
-Sometimes, you need to drop data from DB(See #Troubleshooting from https://www.free5gc.org/installation).
-```bash
-$ docker exec -it mongodb mongo
-> use free5gc
-> db.subscribers.drop()
-> exit # (Or Ctrl-D)
-
-## Reference
-- https://github.com/open5gs/nextepc/tree/master/docker
-
+## Changes in files
+### AMF
+1. In `./install/etc/free5gc/free5gc.conf`
+ - **AMF s1ap address** -> AMF addr
+ - specify your mcc and mnc in **GUMMEI and TAI**
+ - **SMF SBI** -> SMF addr and port 
+ - **db_uri** -> mongodb://[MONGO addr]:27017/free5gc
+2. In `./install/etc/free5gc/freediameter/amf.conf`
+ - **Diameter listen address** -> ListenOn = "[AMF addr]";
+ - **HSS Diameter address** ->  { ConnectTo = "[HSS addr]"; No_TLS; };
+### HSS
+1. In `./install/etc/free5gc/freediameter/hss.conf`
+ - **Diameter listen address** -> ListenOn = "[HSS addr]";
+ - **AMF diameter address** -> { ConnectTo = "[AMF addr]"; No_TLS; };
+### SMF
+1. In `./install/etc/free5gc/free5gc.conf`
+ - **SMF PFCP addr** -> SMF addr
+ - **SMF UPF addr** -> UPF free5gc network addr
+ - **SMF HTTP addr** ->  SMF addr
+2. In `./install/etc/free5gc/freediameter/smf.conf`
+ - **Diameter listen address** -> ListenOn = "[SMF addr]";
+ - **PCRF Diameter address** ->  { ConnectTo = "[PCFR addr]"; No_TLS; };
+### PCRF
+1. In `./install/etc/free5gc/freediameter/pcrf.conf`
+ - **Diameter listen address** -> ListenOn = "[PCRF addr]";
+ - **SMF Diameter address** ->  { ConnectTo = "[SMF addr]"; No_TLS; };
+### UPF
+1. In `./install/etc/free5gc/free5gc.conf`
+ - **PFCP addr** -> UPF free5gc network addr
+ - **GTP-U addr** -> UPF free5gc network addr
 
