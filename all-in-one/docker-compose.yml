@@ -1,0 +1,51 @@
+version: "3"
+services:
+  db:
+    image: mongo
+    container_name: mongodb
+    command: mongod
+    expose:
+      - "27017"
+    networks:
+      - privnet
+    volumes:
+      - ./mongodb:/data/db
+
+  free5gc:
+    image: free5gc
+    container_name: free5gc
+    command: |
+      /bin/bash -c "
+        chmod 666 /dev/net/tun
+        /root/uptun_setup.sh
+        /bin/bash || exit 0
+        sleep infinity
+      "
+    privileged: true
+    volumes:
+      - "./free5gc:/go/free5gc"
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - "/dev/net/tun:/dev/net/tun"
+    sysctls:
+      - net.ipv6.conf.all.disable_ipv6=0
+    environment:
+      DB_URI: mongodb://db/free5gc
+    networks:
+      - privnet
+      - untrust
+    depends_on:
+      - db
+
+networks:
+  privnet:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.5.0.0/24
+  untrust:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.5.0/24
