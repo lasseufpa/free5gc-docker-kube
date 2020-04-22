@@ -35,10 +35,6 @@ RUN go get -u -v "github.com/gorilla/mux"
 RUN go get -u -v "golang.org/x/net/http2"
 RUN go get -u -v "golang.org/x/sys/unix"
 
-#TUN device
-COPY setup.sh /root
-RUN chmod 777 /root/setup.sh
-
 #AMF, SMF, UPF, HSS, and PCRF
 RUN cd /usr/src && git clone https://bitbucket.org/nctu_5g/free5gc-stage-1.git /usr/src/free5gc
 RUN cd /usr/src/free5gc && \
@@ -47,8 +43,12 @@ RUN cd /usr/src/free5gc && \
     make -j `nproc` && \
     make install
 
-WORKDIR /usr/src/free5gc
+COPY setup.sh /root/setup.sh
+RUN chmod +x /root/setup.sh
 
+CMD /root/setup.sh;
+
+WORKDIR /usr/src/free5gc
 
 
 
