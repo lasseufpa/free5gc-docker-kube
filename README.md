@@ -9,6 +9,17 @@ The free5GC is an open-source project for the 5th generation (5G) mobile core ne
 
 Basically all modules have the same basic environment configuration (which is done in the free5gc-base Dockerfile). The difference is that in all free5gc.conf and / or [module].conf must be configured differently. UPF has a difference from all other modules, it must have two network interfaces: a bridge (free5gc network) and a TUN device.
 
+## Base Image
+Each box of project is based on a compiled free5gc image. To build this image use the follow command:
+``sudo docker build -t ./free5g-base/ .``
+
+## Running
+To run all boxes and Web interface use the follow command:
+``sudo docker-compose up -d``
+To exec bash in container
+``sudo docker exec -i -t [container-id] /bin/bash``
+
+
 ## Changes in files
 ### AMF
 1. In `./install/etc/free5gc/free5gc.conf`
