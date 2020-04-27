@@ -11,15 +11,39 @@ Basically all modules have the same basic environment configuration (which is do
 
 ## Base Image
 Each box of project is based on a compiled free5gc image. To build this image use the follow command:
-``sudo docker build -t ./free5g-base/ .``
+
+``sudo docker build -t free5gc ./free5gc-base/``
 
 ## Running
-To run all boxes and Web interface use the follow command:
+To run (all-in-one or cluster mode) use the following command:
+
 ``sudo docker-compose up -d``
+
 To exec bash in container
+
 ``sudo docker exec -i -t [container-id] /bin/bash``
 
+### Troubles
+``ERRR: - The certificate is expired``
 
+Run in container:
+
+```
+cd support/freeDiameter
+./make_certs.sh .
+cd ../..
+make install
+```
+
+Run in the module respective container:
+
+```
+./free5gc-upfd or
+./free5gc-amfd or
+./free5gc-smfd or
+./nextepc-hssd or
+./nextepc-pcrfd or
+```
 ## Changes in files
 ### AMF
 1. In `./install/etc/free5gc/free5gc.conf`
