@@ -36,19 +36,19 @@ RUN go get -u -v "golang.org/x/net/http2"
 RUN go get -u -v "golang.org/x/sys/unix"
 
 #AMF, SMF, UPF, HSS, and PCRF
-RUN cd /usr/src && git clone https://bitbucket.org/nctu_5g/free5gc-stage-1.git /usr/src/free5gc
-RUN cd /usr/src/free5gc && \
+RUN cd / && git clone https://bitbucket.org/nctu_5g/free5gc-stage-1.git free5gc
+RUN cd /free5gc && \
     autoreconf -iv && \
     ./configure --prefix=`pwd`/install && \
     make -j `nproc` && \
     make install
 
-COPY setup.sh /root/setup.sh
-RUN chmod +x /root/setup.sh
+COPY setup.sh /setup.sh
+RUN chmod +x /setup.sh
 
-CMD /root/setup.sh;
+CMD /setup.sh;
 
-WORKDIR /usr/src/free5gc
+WORKDIR /free5gc
 
 
 
