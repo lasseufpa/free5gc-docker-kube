@@ -33,6 +33,8 @@ cd support/freeDiameter
 ./make_certs.sh .
 cd ../..
 make install
+cp /usr/src/free5gc/install/etc/free5gc/free5gc-edited.conf /usr/src/free5gc/install/etc/free5gc/free5gc.conf
+cp /usr/src/free5gc/install/etc/free5gc/freeDiameter/[module name]-edited.conf /usr/src/free5gc/install/etc/free5gc/freeDiameter/[module name].conf
 ```
 
 Run in the module respective container:
