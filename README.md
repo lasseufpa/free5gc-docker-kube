@@ -23,7 +23,7 @@ Each box of project is based on a compiled free5gc image. To build this image us
 
 ``sudo docker build -t free5gc ./free5gc-base/``
 
-To run (all-in-one or cluster mode) use the following command:
+To run use the following command:
 
 ``sudo docker-compose up -d``
 
