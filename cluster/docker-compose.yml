@@ -9,6 +9,7 @@ services:
         build:
                 context: ./amf
                 dockerfile: Dockerfile
+        privileged: true
         depends_on:
             - mongo
         networks:
@@ -55,19 +56,19 @@ services:
         networks:
             net1:
                 ipv4_address: 192.188.2.5
-    webapp:
-        build:
-                context: ./webapp
-                dockerfile: Dockerfile
-        ports:
-            - 3000:3000
-        environment:
-            - DB_URI=mongodb://192.188.2.10:27017/free5gc
-        depends_on:
-            - mongo
-        networks:
-            net1:
-                ipv4_address: 192.188.2.11
+#    webapp:
+#        build:
+#                context: ./webapp
+#                dockerfile: Dockerfile
+#        ports:
+#            - 3000:3000
+#        environment:
+#            - DB_URI=mongodb://192.188.2.10:27017/free5gc
+#        depends_on:
+#            - mongo
+#        networks:
+#            net1:
+#                ipv4_address: 192.188.2.11
 networks:
     net1:
         ipam:

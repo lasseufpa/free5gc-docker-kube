@@ -1,12 +1,14 @@
 From free5gc
 
-RUN apt-get install -y curl
+RUN apt-get install -y git-core curl build-essential openssl libssl-dev python
 
-RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
+RUN git clone https://github.com/nodejs/node.git
 
-RUN apt-get install -y nodejs
+RUN ./configure && make && make install
 
-WORKDIR /usr/src/free5gc/webui
+RUN curl -L https://npmjs.org/install.sh | sudo sh
+
+WORKDIR /free5gc/webui
 
 RUN npm install
 
