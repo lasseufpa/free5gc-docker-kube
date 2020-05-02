@@ -3,49 +3,59 @@ This repository contains the necessary files for the deployment of 5G modules (A
 
 ## What's Free5Gc?
 
-The free5GC is an open-source project for the 5th generation (5G) mobile core network. The source code of free5GC can be downloaded from [here](https://bitbucket.org/nctu_5g/free5gc).
+The free5GC (https://www.free5gc.org/) is the first open-source 5th generation mobile core network based on the specifications defined by 3GPP. This open-source project is the first 3GPP R15 5G core network in Taiwanthe world. It allows the base-station manufacturer to verify their systemsdevices. Also, it will enable industries to develop future technologies such as AI, 8K HD video transmission, AR/VR,V2X for mobile communications. The most important one is that it enables vertical industries to deploymanage a private network away from mobile operators. 
+
+## Stage 1 (current release)
+Migrating 4G Evolved Packet Core (EPC) into 5GC Service-Based Architecture (SBA)
+
+## Stage 2
+Implementing the 5GC features.
+
+## Stage 3
+A full operational 5G. At least one of the application services, such as VoLTE, IPTV, will be supported in this stage. Add features: Operation, Administration and Management (OAM) of 5GC, 5G Orchestrator, and Network Slicing.
 
 ## Environment 
 
-Basically all modules have the same basic environment configuration (which is done in the free5gc-base Dockerfile). The difference is that in all free5gc.conf and / or [module].conf must be configured differently. UPF has a difference from all other modules, it must have two network interfaces: a bridge (free5gc network) and a TUN device.
+Basically all stage 1 modules have the same basic environment configuration (which is done in the free5gc-base Dockerfile). The difference is that in all free5gc.conf and / or [module].conf must be configured differently. UPF has a difference from all other modules, it must have two network interfaces: a bridge (free5gc network) and a TUN device.
 
-## Base Image
+## Starting
 Each box of project is based on a compiled free5gc image. To build this image use the follow command:
 
 ``sudo docker build -t free5gc ./free5gc-base/``
 
-## Running
 To run (all-in-one or cluster mode) use the following command:
 
 ``sudo docker-compose up -d``
 
-To exec bash in container
+To exec bash in container:
 
 ``sudo docker exec -i -t [container-id] /bin/bash``
 
-### Troubles
-``ERRR: - The certificate is expired``
+Container-id can be acess in ``sudo docker ps -a``
+## Running 
 
-Run in container:
+Execution Order: HSS, AMF, UPF, SMF, PCRF
+
+In HSS, AMF, SMF, PCRF containers:
+``./setup-lasse.sh``
+
+In UPF container:
+``./free5gc-upfd``
+
+## Troubles
+``ERRR: - The certificate is expired``
 
 ```
 cd support/freeDiameter
 ./make_certs.sh .
 cd ../..
 make install
-cp /usr/src/free5gc/install/etc/free5gc/free5gc-edited.conf /usr/src/free5gc/install/etc/free5gc/free5gc.conf
-cp /usr/src/free5gc/install/etc/free5gc/freeDiameter/[module name]-edited.conf /usr/src/free5gc/install/etc/free5gc/freeDiameter/[module name].conf
+cp /usr/src/free5gc/install/etc/free5gc/free5gc-lasseconfiguration.conf /usr/src/free5gc/install/etc/free5gc/free5gc.conf
+cp /usr/src/free5gc/install/etc/free5gc/freeDiameter/[module name]-lasseconfiguration.conf /usr/src/free5gc/install/etc/free5gc/freeDiameter/[module name].conf
 ```
 
-Run in the module respective container:
+lasse-setup.sh solve this.
 
-```
-./free5gc-upfd or
-./free5gc-amfd or
-./free5gc-smfd or
-./nextepc-hssd or
-./nextepc-pcrfd or
-```
 ## Changes in files
 ### AMF
 1. In `./install/etc/free5gc/free5gc.conf`
