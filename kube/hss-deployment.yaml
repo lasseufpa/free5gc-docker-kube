@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.21.0 (992df58d8)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: hss
+  name: hss
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: hss
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.version: 1.21.0 (992df58d8)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/cluster_net1: "true"
+        io.kompose.service: hss
+    spec:
+      containers:
+      - image: hss
+        imagePullPolicy: ""
+        name: hss
+        resources: {}
+      restartPolicy: Always
+      serviceAccountName: ""
+      volumes: null
+status: {}

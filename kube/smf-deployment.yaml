@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.21.0 (992df58d8)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: smf
+  name: smf
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: smf
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.version: 1.21.0 (992df58d8)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/cluster_net1: "true"
+        io.kompose.service: smf
+    spec:
+      containers:
+      - image: smf
+        imagePullPolicy: ""
+        name: smf
+        resources: {}
+      restartPolicy: Always
+      serviceAccountName: ""
+      volumes: null
+status: {}

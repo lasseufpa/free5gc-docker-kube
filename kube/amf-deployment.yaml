@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.21.0 (992df58d8)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: amf
+  name: amf
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: amf
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.version: 1.21.0 (992df58d8)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/cluster_net1: "true"
+        io.kompose.service: amf
+    spec:
+      containers:
+      - image: amf
+        imagePullPolicy: ""
+        name: amf
+        resources: {}
+        securityContext:
+          privileged: true
+      restartPolicy: Always
+      serviceAccountName: ""
+      volumes: null
+status: {}

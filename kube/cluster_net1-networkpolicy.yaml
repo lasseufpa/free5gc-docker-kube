@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: NetworkPolicy
+metadata:
+  creationTimestamp: null
+  name: cluster_net1
+spec:
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          io.kompose.network/cluster_net1: "true"
+  podSelector:
+    matchLabels:
+      io.kompose.network/cluster_net1: "true"
