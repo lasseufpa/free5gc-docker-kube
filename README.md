@@ -35,7 +35,7 @@ Container-id can be acess on ``sudo docker ps -a``
 
 ## Running 
 
-Execution Order: HSS, AMF, UPF, SMF, PCRF: 
+Execution Order: Mongo, HSS, AMF, UPF, SMF, PCRF: 
 
 In containers:
 ``./setup-lasse.sh 192.188.2.10 192.188.2.3 192.188.2.2 192.188.2.1 192.188.2.4 192.188.2.5``
