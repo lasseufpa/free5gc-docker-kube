@@ -9,6 +9,7 @@ services:
         build:
                 context: ./amf
                 dockerfile: Dockerfile
+        image: amf
         privileged: true
         depends_on:
             - mongo
@@ -19,6 +20,7 @@ services:
         build:
                 context: ./upf
                 dockerfile: Dockerfile
+        image: upf
         privileged: true
         depends_on:
             - mongo
@@ -31,6 +33,7 @@ services:
         build:
                 context: ./smf
                 dockerfile: Dockerfile
+        image: smf
         depends_on:
             - mongo
             - upf
@@ -41,6 +44,7 @@ services:
         build:
                 context: ./hss
                 dockerfile: Dockerfile
+        image: hss
         depends_on:
             - mongo
         networks:
@@ -50,6 +54,7 @@ services:
         build:
                 context: ./pcrf
                 dockerfile: Dockerfile
+        image: pcrf
         depends_on:
             - mongo
             - smf
@@ -60,6 +65,7 @@ services:
         build:
                 context: ./webapp
                 dockerfile: Dockerfile
+        image: webapp
         ports:
             - 3000:3000
         environment:
