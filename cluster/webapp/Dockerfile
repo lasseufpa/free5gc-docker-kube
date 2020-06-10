@@ -20,4 +20,7 @@ RUN npm install
 
 EXPOSE 3000
 
+COPY setup.sh /root/setup.sh
+RUN chmod +x /root/setup.sh
+
 CMD npm run dev
