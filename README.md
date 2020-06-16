@@ -5,14 +5,15 @@ This repository contains the necessary files for the deployment of 5G modules (A
 
 The free5GC (https://www.free5gc.org/) is the first open-source 5th generation mobile core network based on the specifications defined by 3GPP. This open-source project is the first 3GPP R15 5G core network in Taiwanthe world. It allows the base-station manufacturer to verify their systemsdevices. Also, it will enable industries to develop future technologies such as AI, 8K HD video transmission, AR/VR,V2X for mobile communications. The most important one is that it enables vertical industries to deploymanage a private network away from mobile operators. 
 
-## Stage 1 (current release)
-Migrating 4G Evolved Packet Core (EPC) into 5GC Service-Based Architecture (SBA)
+## Build images
 
-## Stage 2
-Implementing the 5GC features.
+Component created by pull images:  mongo
 
-## Stage 3
-A full operational 5G. At least one of the application services, such as VoLTE, IPTV, will be supported in this stage. Add features: Operation, Administration and Management (OAM) of 5GC, 5G Orchestrator, and Network Slicing.
+``docker pull mongo``
+
+Components created by images from this repository: HSS, AMF, UPF, SMF, PCRF and WEBAPP
+
+``docker-compose build ./cluster``
 
 ## Environment 
 
