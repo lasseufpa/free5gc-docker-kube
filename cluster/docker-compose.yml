@@ -1,7 +1,10 @@
 version: "2"
 services:
     mongo:
-        image: mongo
+        build:
+                context: ./mongo
+                dockerfile: Dockerfile
+        image: mongo-lasse
         networks:
             net1:
                 ipv4_address: 192.188.2.10

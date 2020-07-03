@@ -1,0 +1,361 @@
+[{
+	"_id": {
+		"$oid": "5efe3269f2950d2f06354208"
+	},
+	"imsi": "208930000000001",
+	"pdn": [
+		{
+			"apn": "internet",
+			"_id": {
+				"$oid": "5eeb64b27668e3003af30759"
+			},
+			"pcc_rule": [],
+			"qos": {
+				"qci": 9.0,
+				"arp": {
+					"priority_level": 8.0,
+					"pre_emption_vulnerability": 1.0,
+					"pre_emption_capability": 1.0
+				}
+			},
+			"type": 2.0
+		}
+	],
+	"ambr": {
+		"downlink": 1024000,
+		"uplink": 1024000
+	},
+	"subscribed_rau_tau_timer": 12.0,
+	"network_access_mode": 2.0,
+	"subscriber_status": 0.0,
+	"access_restriction_data": 32.0,
+	"security": {
+		"k": "465B5CE8 B199B49F AA5F0A2E E238A6BC",
+		"amf": "8000",
+		"op": null,
+		"opc": "E8ED289D EBA952E4 283B54E8 8E6183CA"
+	},
+	"__v": 0.0
+},
+{
+	"_id": {
+		"$oid": "5efe326956f12c6c4f5646ff"
+	},
+	"imsi": "208930000000003",
+	"pdn": [
+		{
+			"apn": "internet",
+			"_id": {
+				"$oid": "5eeb62be7668e3003af3074b"
+			},
+			"pcc_rule": [],
+			"qos": {
+				"qci": 9.0,
+				"arp": {
+					"priority_level": 8.0,
+					"pre_emption_vulnerability": 1.0,
+					"pre_emption_capability": 1.0
+				}
+			},
+			"type": 2.0
+		}
+	],
+	"ambr": {
+		"downlink": 1024000,
+		"uplink": 1024000
+	},
+	"subscribed_rau_tau_timer": 12.0,
+	"network_access_mode": 2.0,
+	"subscriber_status": 0.0,
+	"access_restriction_data": 32.0,
+	"security": {
+		"k": "465B5CE8 B199B49F AA5F0A2E E238A6BC",
+		"amf": "8000",
+		"op": null,
+		"opc": "E8ED289D EBA952E4 283B54E8 8E6183CA",
+		"rand": "BD795BA8 1456F4A1 FB32FF0C CF64F431",
+		"sqn": 64
+	},
+	"__v": 0.0
+},
+{
+	"_id": {
+		"$oid": "5efe3269f760c5e1a3e9e5f3"
+	},
+	"imsi": "208930000000009",
+	"pdn": [
+		{
+			"apn": "internet",
+			"_id": {
+				"$oid": "5eeb64a87668e3003af30757"
+			},
+			"pcc_rule": [],
+			"qos": {
+				"qci": 9.0,
+				"arp": {
+					"priority_level": 8.0,
+					"pre_emption_vulnerability": 1.0,
+					"pre_emption_capability": 1.0
+				}
+			},
+			"type": 2.0
+		}
+	],
+	"ambr": {
+		"downlink": 1024000,
+		"uplink": 1024000
+	},
+	"subscribed_rau_tau_timer": 12.0,
+	"network_access_mode": 2.0,
+	"subscriber_status": 0.0,
+	"access_restriction_data": 32.0,
+	"security": {
+		"k": "465B5CE8 B199B49F AA5F0A2E E238A6BC",
+		"amf": "8000",
+		"op": null,
+		"opc": "E8ED289D EBA952E4 283B54E8 8E6183CA"
+	},
+	"__v": 0.0
+},
+{
+	"_id": {
+		"$oid": "5efe3269942fec8a086424c8"
+	},
+	"imsi": "208930000000007",
+	"pdn": [
+		{
+			"apn": "internet",
+			"_id": {
+				"$oid": "5eeb64a07668e3003af30753"
+			},
+			"pcc_rule": [],
+			"qos": {
+				"qci": 9.0,
+				"arp": {
+					"priority_level": 8.0,
+					"pre_emption_vulnerability": 1.0,
+					"pre_emption_capability": 1.0
+				}
+			},
+			"type": 2.0
+		}
+	],
+	"ambr": {
+		"downlink": 1024000,
+		"uplink": 1024000
+	},
+	"subscribed_rau_tau_timer": 12.0,
+	"network_access_mode": 2.0,
+	"subscriber_status": 0.0,
+	"access_restriction_data": 32.0,
+	"security": {
+		"k": "465B5CE8 B199B49F AA5F0A2E E238A6BC",
+		"amf": "8000",
+		"op": null,
+		"opc": "E8ED289D EBA952E4 283B54E8 8E6183CA"
+	},
+	"__v": 0.0
+},
+{
+	"_id": {
+		"$oid": "5efe3269f2739077e451182c"
+	},
+	"imsi": "208930000000006",
+	"pdn": [
+		{
+			"apn": "internet",
+			"_id": {
+				"$oid": "5eeb649b7668e3003af30751"
+			},
+			"pcc_rule": [],
+			"qos": {
+				"qci": 9.0,
+				"arp": {
+					"priority_level": 8.0,
+					"pre_emption_vulnerability": 1.0,
+					"pre_emption_capability": 1.0
+				}
+			},
+			"type": 2.0
+		}
+	],
+	"ambr": {
+		"downlink": 1024000,
+		"uplink": 1024000
+	},
+	"subscribed_rau_tau_timer": 12.0,
+	"network_access_mode": 2.0,
+	"subscriber_status": 0.0,
+	"access_restriction_data": 32.0,
+	"security": {
+		"k": "465B5CE8 B199B49F AA5F0A2E E238A6BC",
+		"amf": "8000",
+		"op": null,
+		"opc": "E8ED289D EBA952E4 283B54E8 8E6183CA"
+	},
+	"__v": 0.0
+},
+{
+	"_id": {
+		"$oid": "5efe3269ffce3fa2998db3ae"
+	},
+	"imsi": "208930000000008",
+	"pdn": [
+		{
+			"apn": "internet",
+			"_id": {
+				"$oid": "5eeb64a47668e3003af30755"
+			},
+			"pcc_rule": [],
+			"qos": {
+				"qci": 9.0,
+				"arp": {
+					"priority_level": 8.0,
+					"pre_emption_vulnerability": 1.0,
+					"pre_emption_capability": 1.0
+				}
+			},
+			"type": 2.0
+		}
+	],
+	"ambr": {
+		"downlink": 1024000,
+		"uplink": 1024000
+	},
+	"subscribed_rau_tau_timer": 12.0,
+	"network_access_mode": 2.0,
+	"subscriber_status": 0.0,
+	"access_restriction_data": 32.0,
+	"security": {
+		"k": "465B5CE8 B199B49F AA5F0A2E E238A6BC",
+		"amf": "8000",
+		"op": null,
+		"opc": "E8ED289D EBA952E4 283B54E8 8E6183CA"
+	},
+	"__v": 0.0
+},
+{
+	"_id": {
+		"$oid": "5efe3269dc5d513838d6f8b1"
+	},
+	"imsi": "208930000000005",
+	"pdn": [
+		{
+			"apn": "internet",
+			"_id": {
+				"$oid": "5eeb64957668e3003af3074f"
+			},
+			"pcc_rule": [],
+			"qos": {
+				"qci": 9.0,
+				"arp": {
+					"priority_level": 8.0,
+					"pre_emption_vulnerability": 1.0,
+					"pre_emption_capability": 1.0
+				}
+			},
+			"type": 2.0
+		}
+	],
+	"ambr": {
+		"downlink": 1024000,
+		"uplink": 1024000
+	},
+	"subscribed_rau_tau_timer": 12.0,
+	"network_access_mode": 2.0,
+	"subscriber_status": 0.0,
+	"access_restriction_data": 32.0,
+	"security": {
+		"k": "465B5CE8 B199B49F AA5F0A2E E238A6BC",
+		"amf": "8000",
+		"op": null,
+		"opc": "E8ED289D EBA952E4 283B54E8 8E6183CA",
+		"rand": "DC642C60 AD5A058F 3347E8D6 A48CFF21",
+		"sqn": 32
+	},
+	"__v": 0.0
+},
+{
+	"_id": {
+		"$oid": "5efe326994b50e4edb3c2a42"
+	},
+	"imsi": "208930000000004",
+	"pdn": [
+		{
+			"apn": "internet",
+			"_id": {
+				"$oid": "5eeb64907668e3003af3074d"
+			},
+			"pcc_rule": [],
+			"qos": {
+				"qci": 9.0,
+				"arp": {
+					"priority_level": 8.0,
+					"pre_emption_vulnerability": 1.0,
+					"pre_emption_capability": 1.0
+				}
+			},
+			"type": 2.0
+		}
+	],
+	"ambr": {
+		"downlink": 1024000,
+		"uplink": 1024000
+	},
+	"subscribed_rau_tau_timer": 12.0,
+	"network_access_mode": 2.0,
+	"subscriber_status": 0.0,
+	"access_restriction_data": 32.0,
+	"security": {
+		"k": "465B5CE8 B199B49F AA5F0A2E E238A6BC",
+		"amf": "8000",
+		"op": null,
+		"opc": "E8ED289D EBA952E4 283B54E8 8E6183CA",
+		"rand": "26C4081D A062B362 048AD91D 5C55CDBC",
+		"sqn": 32
+	},
+	"__v": 0.0
+},
+{
+	"_id": {
+		"$oid": "5efe32690bdea0b00fb80222"
+	},
+	"imsi": "208930000000002",
+	"pdn": [
+		{
+			"apn": "internet",
+			"_id": {
+				"$oid": "5eeb62be7668e3003af3074b"
+			},
+			"pcc_rule": [],
+			"qos": {
+				"qci": 9.0,
+				"arp": {
+					"priority_level": 8.0,
+					"pre_emption_vulnerability": 1.0,
+					"pre_emption_capability": 1.0
+				}
+			},
+			"type": 2.0
+		}
+	],
+	"ambr": {
+		"downlink": 1024000,
+		"uplink": 1024000
+	},
+	"subscribed_rau_tau_timer": 12.0,
+	"network_access_mode": 2.0,
+	"subscriber_status": 0.0,
+	"access_restriction_data": 32.0,
+	"security": {
+		"k": "465B5CE8 B199B49F AA5F0A2E E238A6BC",
+		"amf": "8000",
+		"op": null,
+		"opc": "E8ED289D EBA952E4 283B54E8 8E6183CA",
+		"rand": "4B8F8B3A B0FC557B 587AB809 26A80DA7",
+		"sqn": 64
+	},
+	"__v": 0.0
+}]
+
+
