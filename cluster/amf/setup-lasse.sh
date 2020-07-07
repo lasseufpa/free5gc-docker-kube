@@ -15,4 +15,9 @@ sed -i "s|IP_SMF|$5|g"  /free5gc/install/etc/free5gc/free5gc.conf
 sed -i "s|IP_AMF|$3|g"  /free5gc/install/etc/free5gc/freeDiameter/amf.conf
 sed -i "s|IP_HSS|$2|g"  /free5gc/install/etc/free5gc/freeDiameter/amf.conf
 
-./free5gc-amfd
+touch /free5gc/install/var/log/free5gc/free5gc.log
+ln -sf /proc/1/fd/1 /free5gc/install/var/log/free5gc/free5gc.log
+
+./free5gc-amfd &
+
+exit 0
