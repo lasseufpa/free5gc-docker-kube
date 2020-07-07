@@ -11,4 +11,7 @@ sed -i "s|IP_MONGO|$1|g" /free5gc/install/etc/free5gc/free5gc.conf
 sed -i "s|IP_PCRF|$6|g" /free5gc/install/etc/free5gc/freeDiameter/pcrf.conf
 sed -i "s|IP_SMF|$5|g" /free5gc/install/etc/free5gc/freeDiameter/pcrf.conf
 
-./nextepc-pcrfd
+touch /free5gc/install/var/log/free5gc/free5gc.log
+ln -sf /proc/1/fd/1 /free5gc/install/var/log/free5gc/free5gc.log
+
+./nextepc-pcrfd &
