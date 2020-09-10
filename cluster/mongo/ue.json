@@ -30,10 +30,10 @@
 	"subscriber_status": 0.0,
 	"access_restriction_data": 32.0,
 	"security": {
-		"k": "465B5CE8 B199B49F AA5F0A2E E238A6BC",
+		"k": "8BAF473F2F8FD09487CCCBD7097C6862",
 		"amf": "8000",
 		"op": null,
-		"opc": "E8ED289D EBA952E4 283B54E8 8E6183CA"
+		"opc": "8E27B6AF0E692E750F32667A3B14605D"
 	},
 	"__v": 0.0
 },
@@ -69,10 +69,10 @@
 	"subscriber_status": 0.0,
 	"access_restriction_data": 32.0,
 	"security": {
-		"k": "465B5CE8 B199B49F AA5F0A2E E238A6BC",
+		"k": "8BAF473F2F8FD09487CCCBD7097C6862",
 		"amf": "8000",
 		"op": null,
-		"opc": "E8ED289D EBA952E4 283B54E8 8E6183CA"
+		"opc": "a968912bb8a1108643415dceb3b8a60"
 	},
 	"__v": 0.0
 },
@@ -108,10 +108,10 @@
 	"subscriber_status": 0.0,
 	"access_restriction_data": 32.0,
 	"security": {
-		"k": "465B5CE8 B199B49F AA5F0A2E E238A6BC",
+		"k": "8BAF473F2F8FD09487CCCBD7097C6862",
 		"amf": "8000",
 		"op": null,
-		"opc": "E8ED289D EBA952E4 283B54E8 8E6183CA"
+		"opc": "aa968912bb8a1108643415dceb3b8a60"
 	},
 	"__v": 0.0
 },
@@ -387,4 +387,122 @@
 		"opc": "E8ED289D EBA952E4 283B54E8 8E6183CA"
 	},
 	"__v": 0.0
+},
+{
+	"_id": {
+		"$oid": "5f5a3b945457ea00399db080"
+	},
+	"imsi": "901700000013788",
+	"pdn": [
+		{
+			"apn": "internet",
+			"_id": {
+				"$oid": "5f5a3b945457ea00399db081"
+			},
+			"pcc_rule": [],
+			"qos": {
+				"qci": 9.0,
+				"arp": {
+					"priority_level": 8.0,
+					"pre_emption_vulnerability": 1.0,
+					"pre_emption_capability": 1.0
+				}
+			},
+			"type": 2.0
+		}
+	],
+	"ambr": {
+		"downlink": 1024000,
+		"uplink": 1024000
+	},
+	"subscribed_rau_tau_timer": 12.0,
+	"network_access_mode": 2.0,
+	"subscriber_status": 0.0,
+	"access_restriction_data": 32.0,
+	"security": {
+		"k": "8BAF473F2F8FD09487CCCBD7097C6862",
+		"amf": "8000",
+		"op": null,
+		"opc": "aa968912bb8a1108643415dceb3b8a60"
+	},
+	"__v": 0.0
+},
+{
+	"_id": {
+		"$oid": "5f5a3d2c5457ea00399db082"
+	},
+	"imsi": "208930000000001",
+	"pdn": [
+		{
+			"apn": "internet",
+			"_id": {
+				"$oid": "5f5a3d2c5457ea00399db083"
+			},
+			"pcc_rule": [],
+			"qos": {
+				"qci": 9.0,
+				"arp": {
+					"priority_level": 8.0,
+					"pre_emption_vulnerability": 1.0,
+					"pre_emption_capability": 1.0
+				}
+			},
+			"type": 2.0
+		}
+	],
+	"ambr": {
+		"downlink": 1024000,
+		"uplink": 1024000
+	},
+	"subscribed_rau_tau_timer": 12.0,
+	"network_access_mode": 2.0,
+	"subscriber_status": 0.0,
+	"access_restriction_data": 32.0,
+	"security": {
+		"k": "8BAF473F2F8FD09487CCCBD7097C6862",
+		"amf": "8000",
+		"op": null,
+		"opc": "8E27B6AF0E692E750F32667A3B14605D"
+	},
+	"__v": 0.0
+},
+{
+	"_id": {
+		"$oid": "5f5a3f3a5457ea00399db084"
+	},
+	"imsi": "901700000013789",
+	"pdn": [
+		{
+			"apn": "internet",
+			"_id": {
+				"$oid": "5f5a3f3a5457ea00399db085"
+			},
+			"pcc_rule": [],
+			"qos": {
+				"qci": 9.0,
+				"arp": {
+					"priority_level": 8.0,
+					"pre_emption_vulnerability": 1.0,
+					"pre_emption_capability": 1.0
+				}
+			},
+			"type": 2.0
+		}
+	],
+	"ambr": {
+		"downlink": 1024000,
+		"uplink": 1024000
+	},
+	"subscribed_rau_tau_timer": 12.0,
+	"network_access_mode": 2.0,
+	"subscriber_status": 0.0,
+	"access_restriction_data": 32.0,
+	"security": {
+		"k": "8BAF473F2F8FD09487CCCBD7097C6862",
+		"amf": "8000",
+		"op": null,
+		"opc": "aa968912bb8a1108643415dceb3b8a60"
+	},
+	"__v": 0.0
 }]
+
