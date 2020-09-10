@@ -5,7 +5,7 @@
 	"imsi": "208930000000001",
 	"pdn": [
 		{
-			"apn": "internet",
+			"apn": "oai.ipv4",
 			"_id": {
 				"$oid": "5eeb62af7668e3003af30749"
 			},
@@ -44,7 +44,7 @@
 	"imsi": "208930000000002",
 	"pdn": [
 		{
-			"apn": "internet",
+			"apn": "oai.ipv4",
 			"_id": {
 				"$oid": "5eeb62af7668e3003af30749"
 			},
@@ -83,7 +83,7 @@
 	"imsi": "208930000000003",
 	"pdn": [
 		{
-			"apn": "internet",
+			"apn": "oai.ipv4",
 			"_id": {
 				"$oid": "5eeb62af7668e3003af30749"
 			},
@@ -122,7 +122,7 @@
 	"imsi": "208930000000004",
 	"pdn": [
 		{
-			"apn": "internet",
+			"apn": "oai.ipv4",
 			"_id": {
 				"$oid": "5eeb62af7668e3003af30749"
 			},
@@ -161,7 +161,7 @@
 	"imsi": "208930000000005",
 	"pdn": [
 		{
-			"apn": "internet",
+			"apn": "oai.ipv4",
 			"_id": {
 				"$oid": "5eeb62af7668e3003af30749"
 			},
@@ -200,7 +200,7 @@
 	"imsi": "208930000000006",
 	"pdn": [
 		{
-			"apn": "internet",
+			"apn": "oai.ipv4",
 			"_id": {
 				"$oid": "5eeb62af7668e3003af30749"
 			},
@@ -239,7 +239,7 @@
 	"imsi": "208930000000007",
 	"pdn": [
 		{
-			"apn": "internet",
+			"apn": "oai.ipv4",
 			"_id": {
 				"$oid": "5eeb62af7668e3003af30749"
 			},
@@ -278,7 +278,7 @@
 	"imsi": "208930000000008",
 	"pdn": [
 		{
-			"apn": "internet",
+			"apn": "oai.ipv4",
 			"_id": {
 				"$oid": "5eeb62af7668e3003af30749"
 			},
@@ -317,7 +317,7 @@
 	"imsi": "208930000000009",
 	"pdn": [
 		{
-			"apn": "internet",
+			"apn": "oai.ipv4",
 			"_id": {
 				"$oid": "5eeb62af7668e3003af30749"
 			},
@@ -356,7 +356,7 @@
 	"imsi": "208930000000010",
 	"pdn": [
 		{
-			"apn": "internet",
+			"apn": "oai.ipv4",
 			"_id": {
 				"$oid": "5eeb62af7668e3003af30749"
 			},
@@ -395,7 +395,7 @@
 	"imsi": "901700000013788",
 	"pdn": [
 		{
-			"apn": "internet",
+			"apn": "oai.ipv4",
 			"_id": {
 				"$oid": "5f5a3b945457ea00399db081"
 			},
@@ -434,7 +434,7 @@
 	"imsi": "901700000013786",
 	"pdn": [
 		{
-			"apn": "internet",
+			"apn": "oai.ipv4",
 			"_id": {
 				"$oid": "5f5a3d2c5457ea00399db083"
 			},
@@ -473,7 +473,7 @@
 	"imsi": "901700000013789",
 	"pdn": [
 		{
-			"apn": "internet",
+			"apn": "oai.ipv4",
 			"_id": {
 				"$oid": "5f5a3f3a5457ea00399db085"
 			},
